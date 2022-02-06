@@ -1,0 +1,56 @@
+@import '../../node_modules/aos/src/sass/aos.scss';
+@import url('https://fonts.googleapis.com/css2?family=Architects+Daughter&family=Inter:wght@400;500;600;700;800;900&display=fallback');
+
+@tailwind base;
+@tailwind components;
+
+@layer components {
+  .button {
+    @apply px-4 py-2 border rounded-full cursor-pointer
+      hover:shadow-lg active:scale-95 active:bg-gray-100 transition
+      transform duration-100 ease-out;
+  }
+}
+
+// html {
+//   background: url(/images/tip-portal-background.svg) no-repeat center center
+//     fixed;
+//   -webkit-background-size: cover;
+//   -moz-background-size: cover;
+//   -o-background-size: cover;
+//   background-size: cover;
+// }
+
+body {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+}
+
+main {
+  flex: 1; /* Or flex-grow: 1;*/
+}
+
+// @import 'additional-styles/utility-patterns.scss';
+// @import 'additional-styles/toggle-switch.scss';
+// @import 'additional-styles/theme.scss';
+// @import 'additional-styles/stripe-card.scss';
+
+@tailwind utilities;
+
+.rtl {
+  direction: rtl;
+}
+
+[x-cloak] {
+  display: none;
+}
+
+@tailwind utilities;
+
+.scrollbar-none {
+  scrollbar-width: none;
+}
+.scrollbar-none::-webkit-scrollbar {
+  display: none;
+}
